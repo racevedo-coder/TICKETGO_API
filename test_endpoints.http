@@ -1,3 +1,8 @@
 ### 1- Clasificación top por categoría
 GET http://localhost:8000/api/reportes/clasificacion-top
 
+### 2. Actores estrella
+GET http://localhost:8000/api/analitica/actores-estrella
+
+### 3. Ítems con desviación de su grupo
+GET http://localhost:8000/api/items/desviacion-grupo

@@ -28,10 +28,11 @@ having SUM(v.total )> ( select avg(t.gasto)
 order by gasto_total desc;
 
 
-select z.id_zona, z.nombre, COUNT(b.id_boleta ) as boletas_vendidas
+select z.id_zona, z.nombre, z.nombre, z.id_evento, e.nombre as evento, COUNT(b.id_boleta ) as boletas_vendidas
 from zona z
+join evento e on z.id_evento = e.id_evento
 left join boleta b on b.id_zona  = z.id_zona and b.estado ='activa'
-group by z.id_zona 
+group by z.id_zona, z.nombre, z.id_evento, e.nombre
 having count(b.id_boleta) < (select count(b2.id_boleta) * 1.0 / count(distinct z2.id_zona)
                              from zona z2
                              left join boleta b2 on b2.id_zona = z2.id_zona and b2.estado ='activa'

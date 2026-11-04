@@ -21,4 +21,10 @@ En mi proyecto de venta de boletas, la entidad catálogo es `evento`, la entidad
 
 Este endpoint muestra qué tipos de evento como concierto, deporte, teatro, entre otros, venden las boletas más caras que el promedio general de la plataforma. Para cada categoría que lo cumple, devuelve cuántas boletas se vendieron, el dinero total y el precio promedio por boleta, para esto las boletas anuladas no se cuentan.
 
+### Endpoint 2: `GET /api/analitica/actores-estrella`
 
+Por medio de este endpoint  se muestra qué clientes son los que más compran en TicketGo, para esto suma lo que ha gastado cada uno de ellos en sus compras pagadas y deja solo a los que gastaron más que el promedio de todos los clientes. Para cada uno devuelve su identificador, su nombre y el total que ha gastado y, además, para esto las ventas canceladas no se cuentan.
+
+### Endpoint 3: `GET /api/items/desviacion-grupo`
+
+Aquí se muestran qué zonas han vendido menos boletas que el promedio de las demás zonas de su mismo evento. Sirve para detectar zonas que no se están vendiendo bien, incluidas las que todavía no han vendido ninguna. Cada zona se compara solo con las de su propio evento, y las boletas anuladas no se cuentan. 
