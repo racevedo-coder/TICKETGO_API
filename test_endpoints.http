@@ -1,0 +1,3 @@
+### 1- Clasificación top por categoría
+GET http://localhost:8000/api/reportes/clasificacion-top
+

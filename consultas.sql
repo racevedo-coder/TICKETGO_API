@@ -24,7 +24,8 @@ having SUM(v.total )> ( select avg(t.gasto)
                      from (select v2.id_cliente , sum(v2.total) as gasto
                           from venta v2
                           where v2.estado = 'pagada'
-                          group by v2.id_cliente) as t );
+                          group by v2.id_cliente) as t )
+order by gasto_total desc;
 
 
 select z.id_zona, z.nombre, COUNT(b.id_boleta ) as boletas_vendidas

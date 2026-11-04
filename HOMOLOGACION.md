@@ -15,4 +15,10 @@ TicketGo es una plataforma de venta de boletas para eventos sobre conciertos, de
 En mi proyecto de venta de boletas, la entidad catálogo es `evento`, la entidad item es `zona`, la Entidad Transaccional es `venta`, junto con `pago` y `boleta`. Por otro lado, la entidad actor es `usuario` con rol cliente y la entidad de contexto es el `lugar` del evento.
 
 
+## ENDPOINTS
+
+### Endpoint 1: `GET /api/reportes/clasificacion-top`
+
+Este endpoint muestra qué tipos de evento como concierto, deporte, teatro, entre otros, venden las boletas más caras que el promedio general de la plataforma. Para cada categoría que lo cumple, devuelve cuántas boletas se vendieron, el dinero total y el precio promedio por boleta, para esto las boletas anuladas no se cuentan.
+
 
