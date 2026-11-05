@@ -6,3 +6,6 @@ GET http://localhost:8000/api/analitica/actores-estrella
 
 ### 3. Ítems con desviación de su grupo
 GET http://localhost:8000/api/items/desviacion-grupo
+
+### 4. Análisis limpio por ciudad
+GET http://localhost:8000/api/segmentos/analisis-limpio

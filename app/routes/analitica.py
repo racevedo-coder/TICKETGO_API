@@ -24,7 +24,7 @@ def actores_estrella():
         filas = cursor.fetchall()
 
         if not filas:
-            raise HTTPException(status_code=404, detail="No se encontraron categorías")
+            raise HTTPException(status_code=404, detail="No se encontraron clientes con gasto superior al promedio")
         return filas
 
     except HTTPException:

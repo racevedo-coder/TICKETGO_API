@@ -27,4 +27,9 @@ Por medio de este endpoint  se muestra qué clientes son los que más compran en
 
 ### Endpoint 3: `GET /api/items/desviacion-grupo`
 
-Aquí se muestran qué zonas han vendido menos boletas que el promedio de las demás zonas de su mismo evento. Sirve para detectar zonas que no se están vendiendo bien, incluidas las que todavía no han vendido ninguna. Cada zona se compara solo con las de su propio evento, y las boletas anuladas no se cuentan. 
+Aquí se muestran qué zonas han vendido menos boletas que el promedio de las demás zonas de su mismo evento. Esto sirve para detectar zonas que no se están vendiendo bien, incluidas las que todavía no han vendido ninguna. Cada zona se compara solo con las de su propio evento, y las boletas anuladas no se cuentan. 
+
+### Endpoint 4:  `GET /api/segmentos/analisis-limpio`
+
+Este endpoint muestra cuántas boletas se han vendido y cuánto dinero se ha recaudado en cada ciudad, sin contar a los clientes que alguna vez han tenido una compra cancelada. Así se obtiene un resultado más limpio, sin los clientes con casos problemáticos. Aquí las boletas anuladas tampoco se cuentan. 
+
