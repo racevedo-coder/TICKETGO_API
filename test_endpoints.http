@@ -9,3 +9,12 @@ GET http://localhost:8000/api/items/desviacion-grupo
 
 ### 4. Análisis limpio por ciudad
 GET http://localhost:8000/api/segmentos/analisis-limpio
+
+### 5. Resumen dinámico (por defecto, 2 operaciones)
+GET http://localhost:8000/api/operaciones/resumen-dinamico
+
+### 5b. Con mínimo de 3 operaciones
+GET http://localhost:8000/api/operaciones/resumen-dinamico?min_operaciones=3
+
+### 5c. Sin resultados (debe dar 404:No se encontraron métodos de pago con ese mínimo de operaciones )
+GET http://localhost:8000/api/operaciones/resumen-dinamico?min_operaciones=6

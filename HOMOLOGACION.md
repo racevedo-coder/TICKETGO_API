@@ -33,3 +33,6 @@ Aquí se muestran qué zonas han vendido menos boletas que el promedio de las de
 
 Este endpoint muestra cuántas boletas se han vendido y cuánto dinero se ha recaudado en cada ciudad, sin contar a los clientes que alguna vez han tenido una compra cancelada. Así se obtiene un resultado más limpio, sin los clientes con casos problemáticos. Aquí las boletas anuladas tampoco se cuentan. 
 
+### Endpoint 5: `GET /api/operaciones/resumen-dinamico`
+
+Este endpoint muestra los métodos de pago como PSE, Nequi, Daviplata, tarjeta, efectivo, que se han usado en al menos cierto número de pagos, que se puede cambiar con el parámetro min_operaciones (por defecto 2), y cuyo valor promedio por pago supera el precio de la zona más cara. Para cada método devuelve cuántos pagos tuvo, el monto total y el promedio por pago, solo se incluyen las ventas pagadas.
